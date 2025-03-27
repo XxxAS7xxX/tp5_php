@@ -34,7 +34,7 @@ class ContactsFixtures extends Fixture
                     ->setVille($faker->city())
                     ->setMail($faker->email())
                     ->setSexe($sexe)
-                    ->setAvatar("https://randomuser.me/api/portraits/" . $type . "/" . $i . "jpg");
+                    ->setAvatar("https://randomuser.me/api/portraits/" . $type . "/" . $i . ".jpg");
             $manager->persist($contact);
         }
 
