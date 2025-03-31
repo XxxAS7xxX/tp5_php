@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Catégories{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Liste des catégories</h1>
+    <div class="row categoriecarte">
+        {% for laCategorie in lesCategories %}
+            <div class=" col-md-12 col-lg-3 ">
+                <div class="card mb-3 lescartes" >
+                    <h3 class="card-header" style="border-radius:16px;">{{laCategorie.libelle}}</h3>
+                    <img class="avatar" src="{{ laCategorie.image }}" class="d-block user-select-none" width="90%" 
+                        aria-label="Placeholder: Image cap" style="font-size:1.125rem;text-anchor:middle">
+                    <ul class="list-group list-group-flush listecarte">
+                        <li class="list-group-item">{{laCategorie.description}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="" class="btn btn-success text-center btncarte">Détail ...</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

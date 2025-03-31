@@ -1,0 +1,23 @@
+.avatar{
+    border-radius: 14%;
+    margin: 2% auto 2% auto;
+}
+.lescartes{
+    width:100%; 
+    border-radius:20px;
+    padding: 2.5%;
+}
+h3.card{
+    border-radius: 6%;
+}
+.listecarte{
+    border-radius: 16px;
+}
+.btncarte{
+    width:100%;
+    border-radius: 10px;
+}
+.categoriecarte{
+    display: flex;
+    justify-content: space-around;
+}
