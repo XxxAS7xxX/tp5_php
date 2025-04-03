@@ -9,13 +9,13 @@
             <div class=" col-md-12 col-lg-3 ">
                 <div class="card mb-3 lescartes" >
                     <h3 class="card-header" style="border-radius:16px;">{{laCategorie.libelle}}</h3>
-                    <img class="avatar" src="{{ laCategorie.image }}" class="d-block user-select-none" width="90%" 
+                    <img src="{{asset(laCategorie.image)}}" class="imgcat d-block user-select-none" width="90%" 
                         aria-label="Placeholder: Image cap" style="font-size:1.125rem;text-anchor:middle">
                     <ul class="list-group list-group-flush listecarte">
                         <li class="list-group-item">{{laCategorie.description}}</li>
                     </ul>
                     <div class="card-body">
-                        <a href="" class="btn btn-success text-center btncarte">Détail ...</a>
+                        <a href="{{path("app_ficheCategorie",{'id': laCategorie.id})}}" class="btn btn-success text-center btncarte">Détail ...</a>
                     </div>
                 </div>
             </div>

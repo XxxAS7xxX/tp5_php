@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche categories{% endblock %}
+
+{% block body %}
+    <h1 class="text-center pt-2">Fiche categorie</h1>
+    <div class="row">
+            <div class="card mb-3 lescartes" >
+                <h3 class="card-header" style="border-radius:16px;">{{laCategorie.libelle}}</h3>
+                <div class="row">
+                    <div class="col-2 d-flex align-items-center">                            
+                    <img class="avatar" src="{{ asset(laCategorie.image) }}" class="d-block user-select-none" width="90%" 
+                        aria-label="Placeholder: Image cap" style="font-size:1.125rem;text-anchor:middle">
+                    </div>
+                    <div class="col">
+                        <ul class="list-group list-group-flush listecarte">
+                            <li class="list-group-item">{{laCategorie.description}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                </div>
+            </div>
+        </div>                                                                          {# je centre le bouton dans la page et je centre sont contenu qui a été décentré avec le flex}                                      #}
+        <a href="{{path('app_categories')}}" class="btn btn-success text-center btncarte" style="width:26%; display: flex; justify-self: center; justify-content:center;">Retour à la liste</a>
+    </div>
+{% endblock %}
