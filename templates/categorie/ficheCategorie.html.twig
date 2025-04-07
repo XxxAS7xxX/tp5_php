@@ -23,5 +23,13 @@
             </div>
         </div>                                                                          {# je centre le bouton dans la page et je centre sont contenu qui a été décentré avec le flex}                                      #}
         <a href="{{path('app_categories')}}" class="btn btn-success text-center btncarte" style="width:26%; display: flex; justify-self: center; justify-content:center;">Retour à la liste</a>
+        <hr>
+        <div class="row">
+        {% for leContact in laCategorie.contacts %}
+            <div class=" col-md-12 col-lg-3">
+                {{ include('contact/_ficheContact.html.twig',{'mode':'ficheCategorie'})}}
+            </div>
+        {% endfor %}
+    </div>
     </div>
 {% endblock %}

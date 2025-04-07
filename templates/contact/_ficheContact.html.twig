@@ -1,0 +1,28 @@
+                <div class="card mb-3 lescartes {% if leContact.sexe == 0 %}
+                border-danger
+                {% else %}
+                border-secondary   
+                {% endif %}">
+                    <h3 class="card-header" style="border-radius:16px;">{{leContact.nom}} {{leContact.prenom}}</h3>
+                    <img class="avatar" src="{{ leContact.avatar }}" class="d-block user-select-none" width="90%" 
+                        aria-label="Placeholder: Image cap" style="font-size:1.125rem;text-anchor:middle">
+                    <ul class="list-group list-group-flush listecarte">
+                        <li class="list-group-item">{{leContact.rue}}</li>
+                        <li class="list-group-item">{{leContact.cp}}</li>
+                        <li class="list-group-item">{{leContact.ville}}</li>
+                        <li class="list-group-item">{{leContact.mail}}</li>
+                        <li class="list-group-item">
+                        {% if leContact.sexe==0%}
+                            <span class="badge rounded-pill bg-danger">homme</span>
+                        {% else %}
+                            <span class="badge rounded-pill bg-secondary">femme</span>
+                        {% endif %}
+                        </li>
+                        {% if mode == 'listeContacts'%}
+                        <li class="list-group-item"><a href="{{path('app_ficheCategorie',{'id': leContact.categorie.id})}}">{{leContact.categorie.libelle}}</a></li>
+                        {% endif %}
+                    </ul>
+                    <div class="card-body">
+                        <a href="{{path('app_ficheContact', {'id': leContact.id})}}" class="btn btn-success text-center btncarte">Détail ...</a>
+                    </div>
+                </div>
