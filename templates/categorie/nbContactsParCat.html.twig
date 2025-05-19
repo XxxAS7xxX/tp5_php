@@ -28,7 +28,7 @@
             </tr>
         </tfoot>
     </table>
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 300px; width: 100%; border-radius:20px;"></div>
 {% endblock %}
 {% block javascript%}
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
@@ -40,7 +40,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	exportEnabled: true,
 	animationEnabled: true,
 	title: {
-		text: "Desktop Browser Market Share in 2016"
+		text: "Nombre de contacts par catégories"
 	},
 	data: [{
 		type: "pie",
